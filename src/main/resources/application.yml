@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Neo Service
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+    url: jdbc:postgresql://localhost:5432/neodb
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+  cloud:
+    function:
+      definition: savePosition, getDashboard
+
+coinmarketcap-api:
+  url: https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest
+  key: 
+
+etherscan-api:
+  url:
